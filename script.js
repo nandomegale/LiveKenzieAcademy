@@ -35,3 +35,17 @@ sliderHeight.addEventListener("input", updateValueOutPutHeight);
 function updateValueOutPutHeight(e) {
     heightOutput.value = e.srcElement.value;
 }
+
+// IMC = peso em kg / (altura em metros * altura em metros)
+
+const button = document.getElementById('btnCalcular');
+
+button.addEventListener('click', function () {
+    let peso = document.getElementById("weightOutput").value;
+    let altura = document.getElementById("heightOutput").value;
+    let alturaEmMetros = (altura / 100);
+    let alturaAoQuadrado = (alturaEmMetros * alturaEmMetros) 
+    let imc = peso / alturaAoQuadrado;
+    let resultadoParagrafo = document.querySelector('#resultado p');
+    resultadoParagrafo.innerHTML = imc;
+});

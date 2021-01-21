@@ -12,25 +12,28 @@
                 Calcule seu IMC
             </h1>
             <div class="bmi-calculator-weight">
-                <input class="weight-slider" id="sliderWeight" type="range" min="25" max="150" value="60" />
+                <input class="weight-slider" id="sliderWeight" type="range" min="0" max="150" value="60" />
                 <p>
                     Peso:
-                    <input class="inputNumber" id="weightOutput" type="number" min="25" max="180" value="60"
+                    <input class="inputNumber" id="weightOutput" type="number" min="0" max="150" value="60"
                         oninput="showValueWeight(this.value)" />
                     <span>Kg</span>
                 </p>
             </div>
 
             <div class="bmi-calculator-height">
-                <input class="height-slider" id="sliderHeight" type="range" min="25" max="150" value="60" />
+                <input class="height-slider" id="sliderHeight" type="range" min="25" max="230" value="60" />
                 <p>
                     Altura:
-                    <input class="inputNumber" id="heightOutput" type="number" min="25" max="180" value="60"
+                    <input class="inputNumber" id="heightOutput" type="number" min="25" max="230" value="60"
                         oninput="showValueHeight(this.value)" />
                     <span>cm</span>
                 </p>
             </div>
-            <input class=" button" type="button" value="Calcular" />
+            <input class="button" type="button" value="Calcular" id="btnCalcular" />
+            <div id="resultado">
+                <p>--</p>
+            </div>
         </div>
     </form>
 </body>
